@@ -110,7 +110,7 @@ const validateEmail = (email: string) =>
       { columnFilters, globalFilter, pagination, sorting }, // Dependencies that trigger refetch
     ],
     queryFn: async () => {
-      const fetchURL = new URL('http://localhost:3000/data', window.location.origin);
+      const fetchURL = new URL('http://localhost:5000/data', window.location.origin);
 
       fetchURL.searchParams.set('_start', `${pagination.pageIndex * pagination.pageSize}`);
       fetchURL.searchParams.set('_limit', `${pagination.pageSize}`);
@@ -140,7 +140,7 @@ const validateEmail = (email: string) =>
       console.log("API Response:", json);
 
       // Calculate the total row count by sending a separate query if needed
-      const countResponse = await fetch('http://localhost:3000/data');
+      const countResponse = await fetch('http://localhost:5000/data');
       const totalCount = countResponse.ok ? (await countResponse.json()).length : 0;
 
       return {

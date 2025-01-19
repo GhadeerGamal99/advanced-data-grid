@@ -3,7 +3,16 @@ import { MRT_ColumnDef } from 'material-react-table';
 import { User } from '../types';
 import { validateRequired, validateEmail, validatePhoneNumber, validateDate } from '../utils/validators';
 
-export const useTableColumns = (validationErrors, setValidationErrors, editedUsers, setEditedUsers) => {
+interface ValidationErrors {
+  [key: string]: string | undefined;  // Validation errors with column ID as key
+}
+
+export const useTableColumns = (
+  validationErrors: ValidationErrors,
+  setValidationErrors: React.Dispatch<React.SetStateAction<ValidationErrors>>,  // Type for setValidationErrors
+  editedUsers: Record<string, User>,  // Type for editedUsers (assuming User is the user object type)
+  setEditedUsers: React.Dispatch<React.SetStateAction<Record<string, User>>>  // Type for setEditedUsers
+) => {
   return useMemo<MRT_ColumnDef<User>[]>(() => [
     {
         accessorKey: 'firstName',
@@ -13,11 +22,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validateRequired(event.currentTarget.value)
-              ? 'Required'
-              : undefined;
+            const validationError = !validateRequired(event.currentTarget.value) ? 'Required' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -34,11 +40,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validateRequired(event.currentTarget.value)
-              ? 'Required'
-              : undefined;
+            const validationError = !validateRequired(event.currentTarget.value) ? 'Required' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -55,11 +58,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validateEmail(event.currentTarget.value)
-              ? 'Incorrect Email Format'
-              : undefined;
+            const validationError = !validateEmail(event.currentTarget.value) ? 'Incorrect Email Format' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -76,11 +76,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validateRequired(event.currentTarget.value)
-              ? 'Required'
-              : undefined;
+            const validationError = !validateRequired(event.currentTarget.value) ? 'Required' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -97,11 +94,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validatePhoneNumber(event.currentTarget.value)
-              ? 'Enter 10 Digit Phone Number'
-              : undefined;
+            const validationError = !validatePhoneNumber(event.currentTarget.value) ? 'Enter 10 Digit Phone Number' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -123,11 +117,8 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           required: true,
           error: !!validationErrors?.[cell.id],
           helperText: validationErrors?.[cell.id],
-          //store edited user in state to be saved later
           onBlur: (event) => {
-            const validationError = !validateDate(event.currentTarget.value)
-              ? 'Incorrect date Format'
-              : undefined;
+            const validationError = !validateDate(event.currentTarget.value) ? 'Incorrect date Format' : undefined;
             setValidationErrors({
               ...validationErrors,
               [cell.id]: validationError,
@@ -136,5 +127,5 @@ export const useTableColumns = (validationErrors, setValidationErrors, editedUse
           },
         }),
       },
-  ], [validationErrors, editedUsers]);
+  ], [validationErrors, editedUsers, setEditedUsers ,setValidationErrors]);
 };

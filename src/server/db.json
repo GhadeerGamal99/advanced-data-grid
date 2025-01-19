@@ -4,7 +4,6 @@
       "firstName": "Ahmed",
       "lastName": "Doe",
       "address": "123 Main St",
-      "state": "CA",
       "phoneNumber": "1234567890",
       "lastLogin": "2025-01-18T12:34:56Z",
       "email": "ahmed.doe@example.com"
@@ -13,7 +12,6 @@
       "firstName": "Jane",
       "lastName": "Doe",
       "address": "456 Elm St",
-      "state": "NY",
       "phoneNumber": "2345678901",
       "lastLogin": "2025-01-19T14:23:01Z",
       "email": "jane.doe@example.com"
@@ -22,7 +20,6 @@
       "firstName": "Zara",
       "lastName": "Doe",
       "address": "456 Elm St",
-      "state": "TM",
       "phoneNumber": "3456789012",
       "lastLogin": "2025-01-19T14:23:01Z",
       "email": "zara.doe@example.com"
@@ -31,7 +28,6 @@
       "firstName": "Alice",
       "lastName": "Smith",
       "address": "789 Oak St",
-      "state": "TX",
       "phoneNumber": "4567890123",
       "lastLogin": "2025-01-20T15:30:01Z",
       "email": "alice.smith@example.com"
@@ -40,7 +36,6 @@
       "firstName": "Bob",
       "lastName": "Johnson",
       "address": "101 Pine St",
-      "state": "FL",
       "phoneNumber": "5678901234",
       "lastLogin": "2025-01-21T16:45:56Z",
       "email": "bob.johnson@example.com"
@@ -49,7 +44,6 @@
       "firstName": "Charlie",
       "lastName": "Brown",
       "address": "202 Maple St",
-      "state": "NV",
       "phoneNumber": "6789012345",
       "lastLogin": "2025-01-22T18:12:45Z",
       "email": "charlie.brown@example.com"
@@ -58,7 +52,6 @@
       "firstName": "David",
       "lastName": "Williams",
       "address": "303 Birch St",
-      "state": "WA",
       "phoneNumber": "7890123456",
       "lastLogin": "2025-01-23T19:10:21Z",
       "email": "david.williams@example.com"
@@ -67,7 +60,6 @@
       "firstName": "Eva",
       "lastName": "Davis",
       "address": "404 Cedar St",
-      "state": "CO",
       "phoneNumber": "8901234567",
       "lastLogin": "2025-01-24T20:22:10Z",
       "email": "eva.davis@example.com"
@@ -76,7 +68,6 @@
       "firstName": "Frank",
       "lastName": "Miller",
       "address": "505 Walnut St",
-      "state": "OR",
       "phoneNumber": "9012345678",
       "lastLogin": "2025-01-25T21:15:31Z",
       "email": "frank.miller@example.com"
@@ -85,7 +76,6 @@
       "firstName": "Grace",
       "lastName": "Wilson",
       "address": "606 Pine St",
-      "state": "UT",
       "phoneNumber": "0123456789",
       "lastLogin": "2025-01-26T22:01:45Z",
       "email": "grace.wilson@example.com"
@@ -94,7 +84,6 @@
       "firstName": "Henry",
       "lastName": "Moore",
       "address": "707 Oak St",
-      "state": "ID",
       "phoneNumber": "1234567890",
       "lastLogin": "2025-01-27T23:13:22Z",
       "email": "henry.moore@example.com"
@@ -103,7 +92,6 @@
       "firstName": "Ivy",
       "lastName": "Taylor",
       "address": "808 Elm St",
-      "state": "AZ",
       "phoneNumber": "2345678901",
       "lastLogin": "2025-01-28T14:25:30Z",
       "email": "ivy.taylor@example.com"
@@ -112,7 +100,6 @@
       "firstName": "Jack",
       "lastName": "Anderson",
       "address": "909 Birch St",
-      "state": "NM",
       "phoneNumber": "3456789012",
       "lastLogin": "2025-01-29T17:55:40Z",
       "email": "jack.anderson@example.com"
@@ -121,7 +108,6 @@
       "firstName": "Kim",
       "lastName": "Thomas",
       "address": "1011 Maple St",
-      "state": "KS",
       "phoneNumber": "4567890123",
       "lastLogin": "2025-01-30T16:47:56Z",
       "email": "kim.thomas@example.com"
@@ -130,7 +116,6 @@
       "firstName": "Liam",
       "lastName": "Jackson",
       "address": "1112 Pine St",
-      "state": "MO",
       "phoneNumber": "5678901234",
       "lastLogin": "2025-01-31T13:30:02Z",
       "email": "liam.jackson@example.com"
@@ -139,7 +124,6 @@
       "firstName": "Mona",
       "lastName": "White",
       "address": "1213 Cedar St",
-      "state": "ND",
       "phoneNumber": "6789012345",
       "lastLogin": "2025-02-01T12:40:05Z",
       "email": "mona.white@example.com"
@@ -148,7 +132,6 @@
       "firstName": "Nathan",
       "lastName": "Harris",
       "address": "1314 Walnut St",
-      "state": "KY",
       "phoneNumber": "7890123456",
       "lastLogin": "2025-02-02T11:15:40Z",
       "email": "nathan.harris@example.com"
@@ -157,7 +140,6 @@
       "firstName": "Olivia",
       "lastName": "Clark",
       "address": "1415 Oak St",
-      "state": "SD",
       "phoneNumber": "8901234567",
       "lastLogin": "2025-02-03T10:25:30Z",
       "email": "olivia.clark@example.com"
@@ -166,7 +148,6 @@
       "firstName": "Peter",
       "lastName": "Lewis",
       "address": "1516 Maple St",
-      "state": "NC",
       "phoneNumber": "9012345678",
       "lastLogin": "2025-02-04T09:35:55Z",
       "email": "peter.lewis@example.com"
@@ -175,7 +156,6 @@
       "firstName": "Quinn",
       "lastName": "Young",
       "address": "1617 Elm St",
-      "state": "SC",
       "phoneNumber": "0123456789",
       "lastLogin": "2025-02-05T08:12:05Z",
       "email": "quinn.young@example.com"

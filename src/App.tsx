@@ -19,7 +19,7 @@ import {
   useQuery,
 } from '@tanstack/react-query'; 
 import React from 'react';
-import { Example } from './Example';
+import { Example } from './components/Example';
 
 const ReactQueryDevtoolsProduction = lazy(() =>
   import('@tanstack/react-query-devtools/build/modern/production.js').then(

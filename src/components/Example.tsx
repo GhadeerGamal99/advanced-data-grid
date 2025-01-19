@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo, useState, useEffect } from 'react';
+import {useMemo, useState } from 'react';
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -48,11 +48,8 @@ export const Example = () => {
 >({});
 //keep track of rows that have been edited
 const [editedUsers, setEditedUsers] = useState<Record<string, User>>({})
-const [groupedColumnMode, setGroupedColumnMode] = useState<
-false | 'remove' | 'reorder'
->('reorder');
 
-const { mutateAsync: updateUsers, isPending: isUpdatingUsers } =
+const { mutateAsync: updateUsers } =
 useUpdateUsers();
 function useUpdateUsers() {
     const queryClient = useQueryClient();
@@ -71,7 +68,6 @@ function useUpdateUsers() {
           }),
         );
       },
-      // onSettled: () => queryClient.invalidateQueries({ queryKey: ['users'] }), //refetch users after mutation, disabled for demo
     });
   }
 const handleSaveUsers = async () => {
@@ -103,14 +99,13 @@ const validateEmail = (email: string) =>
     isError,
     isRefetching,
     isLoading,
-    refetch,
   } = useQuery<UserApiResponse>({
     queryKey: [
       'users-list',
       { columnFilters, globalFilter, pagination, sorting }, // Dependencies that trigger refetch
     ],
     queryFn: async () => {
-      const fetchURL = new URL('http://localhost:3000/data', window.location.origin);
+      const fetchURL = new URL('http://localhost:5000/data', window.location.origin);
 
       fetchURL.searchParams.set('_start', `${pagination.pageIndex * pagination.pageSize}`);
       fetchURL.searchParams.set('_limit', `${pagination.pageSize}`);
@@ -140,7 +135,7 @@ const validateEmail = (email: string) =>
       console.log("API Response:", json);
 
       // Calculate the total row count by sending a separate query if needed
-      const countResponse = await fetch('http://localhost:3000/data');
+      const countResponse = await fetch('http://localhost:5000/data');
       const totalCount = countResponse.ok ? (await countResponse.json()).length : 0;
 
       return {
@@ -289,7 +284,7 @@ const validateEmail = (email: string) =>
     columns,
     data,
     enableGrouping: true,
-    groupedColumnMode,
+    // groupedColumnMode,
     initialState: { showColumnFilters: true ,
          expanded: true, 
          grouping: ['firstName', 'lastName'], 
